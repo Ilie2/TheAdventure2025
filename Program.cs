@@ -1,4 +1,4 @@
-﻿using Silk.NET.SDL;
+using Silk.NET.SDL;
 using Thread = System.Threading.Thread;
 
 namespace TheAdventure;
@@ -21,7 +21,7 @@ public static class Program
         {
             var input = new Input(sdl);
             var gameRenderer = new GameRenderer(sdl, gameWindow);
-            var engine = new Engine(gameRenderer, input);
+            var engine = new SimpleBombermanEngine(gameRenderer, input);
 
             engine.SetupWorld();
 

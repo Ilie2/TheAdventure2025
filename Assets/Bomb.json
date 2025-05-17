@@ -1,0 +1,13 @@
+{
+  "name": "Bomb",
+  "image": "bomb.png",
+  "frameWidth": 48,
+  "frameHeight": 48,
+  "animations": {
+    "Bomb": {
+      "frames": [0, 1, 2, 3],
+      "frameDuration": 250,
+      "loop": true
+    }
+  }
+}

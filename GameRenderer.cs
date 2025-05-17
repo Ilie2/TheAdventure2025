@@ -110,4 +110,12 @@ public unsafe class GameRenderer
     {
         _sdl.RenderPresent(_renderer);
     }
+    
+    public void SetTextureColorMod(int textureId, byte r, byte g, byte b)
+    {
+        if (_texturePointers.TryGetValue(textureId, out var imageTexture))
+        {
+            _sdl.SetTextureColorMod((Texture*)imageTexture, r, g, b);
+        }
+    }
 }

@@ -82,7 +82,7 @@ public class PlayerObject : RenderableGameObject
         SetState(PlayerState.Attack, direction);
     }
 
-    public void UpdatePosition(double up, double down, double left, double right, int width, int height, double time)
+    public virtual void UpdatePosition(double up, double down, double left, double right, int width, int height, double time)
     {
         if (State.State == PlayerState.GameOver)
         {

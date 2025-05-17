@@ -1,0 +1,13 @@
+{
+  "name": "Explosion",
+  "image": "explosion.png",
+  "frameWidth": 48,
+  "frameHeight": 48,
+  "animations": {
+    "Explode": {
+      "frames": [0, 1, 2, 3, 4],
+      "frameDuration": 100,
+      "loop": false
+    }
+  }
+}

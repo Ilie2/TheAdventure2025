@@ -6,6 +6,7 @@ public class TemporaryGameObject : RenderableGameObject
 {
     public double Ttl { get; init; }
     public bool IsExpired => (DateTimeOffset.Now - _spawnTime).TotalSeconds >= Ttl;
+    public double TimeRemaining => Math.Max(0, Ttl - (DateTimeOffset.Now - _spawnTime).TotalSeconds);
     
     private DateTimeOffset _spawnTime;
     
@@ -14,5 +15,10 @@ public class TemporaryGameObject : RenderableGameObject
     {
         Ttl = ttl;
         _spawnTime = DateTimeOffset.Now;
+    }
+    
+    public virtual void Update(double deltaTime)
+    {
+        // Base implementation does nothing
     }
 }
